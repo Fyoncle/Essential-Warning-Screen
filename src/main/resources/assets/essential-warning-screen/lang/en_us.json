@@ -1,0 +1,8 @@
+{
+  "essentialwarningscreen.info_1": "It seems like you installed %s.",
+  "essentialwarningscreen.info_2": "§cEssential is §lNOT SAFE§c to use§r, they collect your data and their online server feature is closed-source.",
+  "essentialwarningscreen.info_3": "Please consider removing the mod for your own safety and use the alternatives listed in Why Not button below.",
+  "essentialwarningscreen.why_not_essential": "Why not Essential?",
+  "essentialwarningscreen.ignore": "Ignore",
+  "essentialwarningscreen.dont_show_again": "Don't Show Again"
+}
