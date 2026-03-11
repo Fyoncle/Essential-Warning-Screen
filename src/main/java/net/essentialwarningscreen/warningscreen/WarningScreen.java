@@ -68,7 +68,7 @@ public class WarningScreen extends Screen {
     private void addNotEssentialButton() {
         this.addDrawableChild(ButtonWidget.builder(
                 Text.translatable("essentialwarningscreen.why_not_essential"),
-                button -> Util.getOperatingSystem().open("https://notessential.blurry.gay/")
+                button -> Util.getOperatingSystem().open("https://alternatives.microcontrollers.dev/latest/essential/")
         ).dimensions(this.width / 2 - 200 / 2, this.height / 2 - 20, 200, 20).build());
     }
 
