@@ -1,13 +1,13 @@
 package net.essentialwarningscreen.warningscreen;
 
 import net.essentialwarningscreen.EssentialWarningScreenConfig;
-import net.minecraft.client.font.Alignment;
 import net.minecraft.client.font.MultilineText;
 import net.minecraft.client.gl.RenderPipelines;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.text.Text;
+import net.minecraft.util.Colors;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 
@@ -46,13 +46,8 @@ public class WarningScreen extends Screen {
     }
 
     @Override
-    public void renderBackground(DrawContext context, int mouseX, int mouseY, float deltaTicks) {
-        super.renderBackground(context, mouseX, mouseY, deltaTicks);
-    }
-
-    @Override
-    public void render(DrawContext context, int mouseX, int mouseY, float deltaTicks) {
-        super.render(context, mouseX, mouseY, deltaTicks);
+    public void render(DrawContext context, int mouseX, int mouseY, float delta) {
+        super.render(context, mouseX, mouseY, delta);
 
         context.drawGuiTexture(
                 RenderPipelines.GUI_TEXTURED,
@@ -62,13 +57,13 @@ public class WarningScreen extends Screen {
                 375, 25
         );
 
-        infoText.draw(Alignment.CENTER, this.width / 2, this.height / 2 - 80, 20, context.getTextConsumer());
+        infoText.drawCenterWithShadow(context, this.width / 2, this.height / 2 - 80, 20, Colors.WHITE);
     }
 
     private void addNotEssentialButton() {
         this.addDrawableChild(ButtonWidget.builder(
                 Text.translatable("essentialwarningscreen.why_not_essential"),
-                button -> Util.getOperatingSystem().open("https://notessential.blurry.gay/")
+                button -> Util.getOperatingSystem().open("https://alternatives.microcontrollers.dev/latest/essential/")
         ).dimensions(this.width / 2 - 200 / 2, this.height / 2 - 20, 200, 20).build());
     }
 
