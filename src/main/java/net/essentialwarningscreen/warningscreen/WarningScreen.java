@@ -14,7 +14,7 @@ import org.lwjgl.glfw.GLFW;
 public class WarningScreen extends Screen {
 
     private static final Identifier LOGO_TEXTURE =
-            new Identifier("essentialwarningscreen", "textures/gui/notessential.png");
+            Identifier.of("essentialwarningscreen", "textures/gui/notessential.png");
 
     private MultilineText infoText;
 
@@ -48,7 +48,8 @@ public class WarningScreen extends Screen {
 
     @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
-        renderBackground(context);
+        renderBackground(context, mouseX, mouseY, delta);
+        super.render(context, mouseX, mouseY, delta);
 
         context.drawTexture(
                 LOGO_TEXTURE,
@@ -59,7 +60,6 @@ public class WarningScreen extends Screen {
                 375, 25
         );
 
-        super.render(context, mouseX, mouseY, delta);
         infoText.drawCenterWithShadow(context, this.width / 2, this.height / 2 - 80, 20, Colors.WHITE);
     }
 

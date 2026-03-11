@@ -10,7 +10,7 @@ public class EssentialWarningScreenConfig extends Config {
     public boolean essentialWarningDisabled = false;
 
     public EssentialWarningScreenConfig() {
-        super(new Identifier(EssentialWarningScreen.MOD_ID, "config"));
+        super(Identifier.of(EssentialWarningScreen.MOD_ID, "config"));
     }
 
     public static void init() {
