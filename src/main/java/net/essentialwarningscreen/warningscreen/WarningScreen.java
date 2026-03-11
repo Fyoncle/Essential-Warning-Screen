@@ -57,7 +57,7 @@ public class WarningScreen extends Screen {
                 375, 25
         );
 
-        infoText.drawCenterWithShadow(context, this.width / 2, this.height / 2 - 80, 20, Colors.WHITE);
+        infoText.draw(context, MultilineText.Alignment.CENTER, this.width / 2, this.height / 2 - 80, 20, true, Colors.WHITE);
     }
 
     private void addNotEssentialButton() {
