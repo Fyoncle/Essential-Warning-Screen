@@ -1,0 +1,8 @@
+{
+  "essentialwarningscreen.info_1": "It seems like you've installed %s.",
+  "essentialwarningscreen.info_2": "§cEssential is §lNOT SAFE§c to use§r, they collect your data and its world hosting feature is closed-source.",
+  "essentialwarningscreen.info_3": "Please consider removing it and using the safer alternatives listed in the button below.",
+  "essentialwarningscreen.why_not_essential": "Why Not Essential?",
+  "essentialwarningscreen.ignore": "Ignore",
+  "essentialwarningscreen.dont_warn_again": "Don't Warn Again"
+}
