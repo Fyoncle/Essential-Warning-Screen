@@ -25,7 +25,7 @@
   ],
   "depends": {
     "fabricloader": ">=0.18.4",
-    "minecraft": "1.21.2",
+    "minecraft": ">=1.21.2 <=1.21.5",
     "fabric-api": "*",
     "fzzy_config": "*"
   },
