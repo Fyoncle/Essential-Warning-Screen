@@ -12,11 +12,17 @@ import net.minecraft.text.Text;
 public class EssentialWarningScreen implements ClientModInitializer {
 
     public static final String MOD_ID = "essentialwarningscreen";
+    private boolean hasShownWarning = false;
 
     @Override
     public void onInitializeClient() {
         EssentialWarningScreenConfig.init();
-        ClientLifecycleEvents.CLIENT_STARTED.register(this::onFullLoad);
+        ScreenEvents.AFTER_INIT.register((mc, screen, width, height) -> {
+            if (screen instanceof TitleScreen && !hasShownWarning && shouldShowWarning()) {
+                hasShownWarning = true;
+                mc.setScreen(new WarningScreen(Text.empty()));
+            }
+        });
     }
 
     private void onFullLoad(MinecraftClient client) {
