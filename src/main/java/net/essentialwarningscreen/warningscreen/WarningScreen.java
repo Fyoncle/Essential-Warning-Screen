@@ -5,6 +5,7 @@ import net.minecraft.client.font.MultilineText;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.text.Text;
 import net.minecraft.util.Colors;
 import net.minecraft.util.Identifier;
@@ -14,7 +15,7 @@ import org.lwjgl.glfw.GLFW;
 public class WarningScreen extends Screen {
 
     private static final Identifier LOGO_TEXTURE =
-            Identifier.of("essentialwarningscreen", "textures/gui/notessential.png");
+            Identifier.of("essentialwarningscreen", "notessential");
 
     private MultilineText infoText;
 
@@ -51,12 +52,11 @@ public class WarningScreen extends Screen {
         renderBackground(context, mouseX, mouseY, delta);
         super.render(context, mouseX, mouseY, delta);
 
-        context.drawTexture(
+        context.drawGuiTexture(
+                RenderLayer::getGuiTextured,
                 LOGO_TEXTURE,
                 this.width / 2 - 375 / 2,
                 this.height / 2 - 130,
-                0, 0,
-                375, 25,
                 375, 25
         );
 
