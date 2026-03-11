@@ -1,20 +1,20 @@
 package net.essentialwarningscreen.warningscreen;
 
 import net.essentialwarningscreen.EssentialWarningScreenConfig;
+import net.minecraft.client.font.Alignment;
 import net.minecraft.client.font.MultilineText;
+import net.minecraft.client.gl.RenderPipelines;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.text.Text;
-import net.minecraft.util.Colors;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
-import org.lwjgl.glfw.GLFW;
 
 public class WarningScreen extends Screen {
 
     private static final Identifier LOGO_TEXTURE =
-            Identifier.of("essentialwarningscreen", "textures/gui/notessential.png");
+            Identifier.of("essentialwarningscreen", "notessential");
 
     private MultilineText infoText;
 
@@ -41,26 +41,28 @@ public class WarningScreen extends Screen {
     }
 
     @Override
-    public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
-        if (keyCode == GLFW.GLFW_KEY_ESCAPE) return true;
-        return super.keyPressed(keyCode, scanCode, modifiers);
+    public boolean shouldCloseOnEsc() {
+        return false;
     }
 
     @Override
-    public void render(DrawContext context, int mouseX, int mouseY, float delta) {
-        renderBackground(context, mouseX, mouseY, delta);
-        super.render(context, mouseX, mouseY, delta);
+    public void renderBackground(DrawContext context, int mouseX, int mouseY, float deltaTicks) {
+        super.renderBackground(context, mouseX, mouseY, deltaTicks);
+    }
 
-        context.drawTexture(
+    @Override
+    public void render(DrawContext context, int mouseX, int mouseY, float deltaTicks) {
+        super.render(context, mouseX, mouseY, deltaTicks);
+
+        context.drawGuiTexture(
+                RenderPipelines.GUI_TEXTURED,
                 LOGO_TEXTURE,
                 this.width / 2 - 375 / 2,
                 this.height / 2 - 130,
-                0, 0,
-                375, 25,
                 375, 25
         );
 
-        infoText.drawCenterWithShadow(context, this.width / 2, this.height / 2 - 80, 20, Colors.WHITE);
+        infoText.draw(Alignment.CENTER, this.width / 2, this.height / 2 - 80, 20, context.getTextConsumer());
     }
 
     private void addNotEssentialButton() {
