@@ -1,10 +1,17 @@
 <div align="center">
 
-[![NotEssential](https://cdn.modrinth.com/data/cached_images/5f0633f349a6049c5ef19553101e425372d5db87.png)](https://notessential.blurry.gay/)
+[![NotEssential](https://cdn.modrinth.com/data/cached_images/5f0633f349a6049c5ef19553101e425372d5db87.png)](https://alternatives.microcontrollers.dev/latest/essential/)
+
+<a href="https://modrinth.com/modpack/elysium-days" target="_blank" rel="noopener noreferrer">
+  <img src="https://raw.githubusercontent.com/Fyoncle/Elysium-Days/main/ed_badge.png" alt="As seen in Elysium Days">
+</a>
+
+<br>
+<br>
 
 A utility mod for modpack developers who wants to keep their users safe and warn people about the usage of [Essential](https://modrinth.com/mod/essential) and their [Privacy Policy](https://essential.gg/privacy-policy).
 
-### Here is how it looks like!
+## Here is how it looks like!
 ![Preview](https://cdn.modrinth.com/data/cached_images/b09e586084dfcfec7198a4947fe856c967dc7f85.png)
 
 #
@@ -26,8 +33,11 @@ Here is their privacy policy (Updated as of 1.08.2025):
 
 #
 
+<div align="center">
+
 ### Credits:
-- Thanks to the [Vital](https://github.com/usevital) Team for developing [Not Essential](https://notessential.blurry.gay/) website which is used by the "Why not Essential?" button in this mod.
-- Ghost in the logo taken from a [Reddit thread](https://www.reddit.com/r/PixelArt/comments/1dinf1r/1bit_creatures_8x8/) by [V3X3D](https://www.reddit.com/user/_V3X3D_/)
+Thanks to the [Vital](https://github.com/usevital) Team for developing [Not Essential](https://alternatives.microcontrollers.dev/latest/essential/) website which is used by the "Why not Essential?" button in this mod.  
+Ghost in the logo taken from a [Reddit thread](https://www.reddit.com/r/PixelArt/comments/1dinf1r/1bit_creatures_8x8/) by [V3X3D](https://www.reddit.com/user/_V3X3D_/)
 
 ### <font color="#de3735">Disclaimer: This mod is not affiliated with, developed by, or supported by the Vital Team or the NotEssential developers.</font>
+</div>
